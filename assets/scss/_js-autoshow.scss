@@ -1,0 +1,10 @@
+.js-autoshow {
+  > * {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .js-show-me {
+    opacity: 1;
+  }
+}

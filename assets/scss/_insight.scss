@@ -1,0 +1,101 @@
+.insight {
+  @include clearfix();
+
+  &-cta {
+    @include clearfix();
+    padding: 50px 0;
+
+    @include media(m) {
+      width: 40%;
+      float: left;
+    }
+
+    @include media(l) {
+      width: 45%;
+    }
+  }
+
+  &-cta-inner {
+    float: right;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+
+    @include media(m) {
+      position: relative;
+      top: 40px;
+    }
+
+    @include media(s-down) {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 50px;
+    }
+  }
+
+  &-quote {
+    padding: 50px 30px 50px 60px;
+    background-image: url('/assets/img/bengalo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    overflow-y: hidden;
+    z-index: 2;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background-color: #301c1d;
+      opacity: .3;
+      z-index: -1;
+    }
+
+    &:after {
+      position: absolute;
+      left: -70px;
+      bottom: 0;
+      height: 120%;
+      width: 70px;
+      background-color: white;
+      transform-origin: bottom left;
+      transform: rotate(10deg);
+
+      @include media(m) {
+        content: '';
+      }
+    }
+
+    @include media(m) {
+      width: 60%;
+      float: right;
+    }
+
+    @include media(l) {
+      width: 55%;
+    }
+  }
+
+  &-quote-block {
+    margin-left: 50px;
+    margin-right: 30px;
+    position: relative;
+
+    @include media(s-down) {
+      margin: 0;
+    }
+
+    &:before {
+      content: "„";
+      position: absolute;
+      font-size: 60px;
+      left: -45px;
+      top: -55px;
+      @include smooth();
+    }
+  }
+}

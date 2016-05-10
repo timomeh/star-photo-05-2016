@@ -1,0 +1,12 @@
+$blue: #0067af;
+
+html, body {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: white;
+  color: $blue;
+}
+
+*, &:before, &:after {
+  box-sizing: border-box;
+}

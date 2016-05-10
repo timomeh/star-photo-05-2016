@@ -1,0 +1,19 @@
+.quote {
+  margin: 0;
+  padding: 0;
+  font-family: "Ultra", serif;
+
+  p {
+    @include smooth();
+  }
+
+  p:last-of-type {
+    &:after {
+      content: "“";
+    }
+  }
+
+  &-footer {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+}

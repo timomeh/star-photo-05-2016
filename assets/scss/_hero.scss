@@ -1,0 +1,168 @@
+.hero {
+  @include clearfix();
+  overflow-y: hidden;
+  font-family: "Ultra", serif;
+  letter-spacing: 0.03em;
+
+  &-image {
+    height: 400px;
+    background-color: $blue;
+    position: relative;
+
+    @include media(m) {
+      width: 37%;
+      float: right;
+    }
+
+    @include media(l) {
+      width: 50%;
+      float: right;
+    }
+  }
+
+  &-image-full {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-image-0 {
+    background-image: url('/assets/img/beer.jpg');
+  }
+
+  &-image-1 {
+    background-image: url('/assets/img/elvis.jpg');
+  }
+
+  &-image-2 {
+    background-image: url('/assets/img/pommes-horst-gisela.jpg');
+  }
+
+  &-image-3 {
+    background-image: url('/assets/img/playgirl.jpg');
+  }
+
+  &-image-4 {
+    background-image: url('/assets/img/snow.jpg');
+    background-position: right center;
+
+    @include media(l) {
+      background-position: center top;
+    }
+  }
+
+  &-title {
+    background-color: white;
+    height: 400px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      width: 200px;
+      background-color: white;
+      left: 100%;
+      margin-left: -200px;
+      bottom: 0;
+      height: 500px;
+      transform-origin: bottom left;
+      transform: rotate(10deg);
+
+      @include media(m) {
+        content: '';
+      }
+    }
+
+    @include media(m) {
+      width: 63%;
+      float: left;
+    }
+
+    @include media(l) {
+      width: 50%;
+      float: left;
+    }
+
+    @include media(s-down) {
+      height: auto;
+    }
+  }
+
+  &-title-inner {
+    text-transform: uppercase;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 450px;
+    height: 400px;
+
+    @include media(s-down) {
+      display: table;
+      margin: 0 auto;
+      padding-top: 200px;
+      padding-bottom: 30px;
+      width: auto;
+    }
+
+    @include media(m) {
+      width: 500px;
+      max-width: 100%;
+      margin: 0;
+      float: right;
+    }
+  }
+
+  &-headline {
+    font-size: 36px;
+    line-height: 1;
+    margin: 0;
+    position: relative;
+    top: 100px;
+
+    @include media(s-down) {
+      display: table;
+      font-size: 26px;
+      top: 0;
+    }
+  }
+
+  &-subheadline {
+    position: relative;
+    top: 110px;
+    line-height: 1.1;
+    padding-top: 20px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+      height: 3px;
+      background-color: $blue;
+    }
+
+    @include media(s-down) {
+      display: table;
+      top: 0;
+      margin-top: 20px;
+    }
+  }
+
+  &-reloaded {
+    position: absolute;
+    left: 320px;
+    top: 50px;
+    width: 100px;
+    fill: $blue;
+
+    @include media(s-down) {
+      left: 50%;
+      margin-left: -50px;
+    }
+  }
+}

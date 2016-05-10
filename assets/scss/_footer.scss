@@ -1,0 +1,27 @@
+.footer {
+  background-color: $blue;
+  padding: 30px 0;
+  color: white;
+  text-align: right;
+
+  &-wrap {
+    padding: 0 40px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &-imprint {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  a {
+    display: inline-block;
+    color: inherit;
+  }
+}
+
+.timo-is-so-awesome-why-not-follow-him-on-twitter {
+  opacity: .8;
+}

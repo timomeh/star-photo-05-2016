@@ -1,0 +1,43 @@
+@function em($pixels, $context: 16px) {
+  @return ($pixels / $context) * 1em;
+}
+
+@mixin smooth() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+$bp-xs: 320px;
+$bp-s: 520px;
+$bp-m: 768px;
+$bp-l: 1020px;
+
+$breakpoints: (
+  xs-only: '(max-width: #{em($bp-s - 1px)})',
+  s: '(min-width: #{em($bp-s)})',
+  s-only: '(min-width: #{em($bp-s)}) and (max-width: #{em($bp-m - 1px)})',
+  s-down: '(max-width: #{em($bp-m - 1px)})',
+  m: '(min-width: #{em($bp-m)})',
+  m-only: '(min-width: #{em($bp-m)}) and (max-width: #{em($bp-l - 1px)})',
+  l: '(min-width: #{em($bp-l)})'
+);
+
+@mixin media($bp) {
+  @if map-has-key($breakpoints, $bp) {
+    @media #{map-get($breakpoints, $bp)} {
+      @content;
+    }
+  }
+
+  @else {
+    @error "There is no such thing as breakpoint #{$bp}";
+  }
+}
