@@ -1,9 +1,16 @@
 $blue: #0067af;
 
+html {
+  background-color: $blue;
+}
+
+body {
+  background-color: white;
+}
+
 html, body {
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: white;
   color: $blue;
 }
 
